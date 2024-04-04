@@ -25,12 +25,12 @@ export default function Cart() {
 
 
     return (
-        <Fragment>
+        <Fragment >
             {items.length==0 ? 
-                <h2 className="mt-5">Your Cart is Empty</h2> :
+                <h2 className="mt-5 full">Your Cart is Empty</h2> :
                 <Fragment>
                      <h2 className="mt-5">Your Cart: <b>{items.length} items</b></h2>
-                    <div className="row d-flex justify-content-between">
+                    <div className="row d-flex justify-content-between full">
                         <div className="col-12 col-lg-8">
                             {items.map(item => (
                                 <Fragment key={item.product}>

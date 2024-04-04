@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
 
-export default function Product ({product, col}) {
+export default function Product ({product}) {
     return (
-        <div className={`col-sm-12 col-md-6 col-lg-${col} my-3`}>
-            <div className="card p-3 rounded">
+        <div className={`  mt-1 brdd `}>
+            <div className="card p-3 br imi">
                 {product.images.length > 0 &&
                 <img
-                className="card-img-top mx-auto"
+                className="card-img-top mx-auto im"
                 src={product.images[0].image}
                 alt={product.name}
                 />}
-                <div className="card-body d-flex flex-column">
+                <div className="card-body d-flex flex-column ">
                 <h5 className="card-title">
                     <Link to={`/product/${product._id}`}>{product.name}</Link>
                 </h5>

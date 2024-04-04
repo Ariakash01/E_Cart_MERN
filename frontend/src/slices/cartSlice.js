@@ -77,8 +77,9 @@ const cartSlice = createSlice({
         orderCompleted(state, action) {
             localStorage.removeItem('shippingInfo');
             localStorage.removeItem('cartItems');
-            sessionStorage.removeItem('orderInfo');
+    
             return {
+                ...state,
                 items: [],
                 loading: false,
                 shippingInfo: {}

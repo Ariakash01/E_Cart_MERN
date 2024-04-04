@@ -17,28 +17,30 @@ export default function Header () {
 
 
     return (
-    <nav className="navbar row">
-        <div className="col-12 col-md-3">
+    <nav className="navbar row wrap">
+        <div className="col-12 col-md-2">
           <div className="navbar-brand">
             <Link to="/">
-              <img width="150px" alt='JVLcart Logo' src="/images/logo.png" />
+              <img  alt='JVLcart Logo' className='logo_main' width={110} height={40} src="/images/logo_amz.png" />
             </Link>
             </div>
         </div>
   
-        <div className="col-12 col-md-6 mt-2 mt-md-0">
+        <div className="col-12 col-md-4 mt-2 mt-md-0">
            <Search/>
         </div>
   
-        <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
+        <div className="col-12 col-md-6 mt-4 mt-md-0 pro text-center ">
+          <div className='prof'>
           { isAuthenticated ? 
             (
-              <Dropdown className='d-inline' >
+             
+              <Dropdown className='d-inline ' >
                   <Dropdown.Toggle variant='default text-white pr-5' id='dropdown-basic'>
                     <figure className='avatar avatar-nav'>
                       <Image width="50px" src={user.avatar??'./images/default_avatar.png'}  />
                     </figure>
-                    <span>{user.name}</span>
+                    <span className='bla'>{user.name}</span>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                       { user.role === 'admin' && <Dropdown.Item onClick={() => {navigate('admin/dashboard')}} className='text-dark'>Dashboard</Dropdown.Item> }
@@ -51,9 +53,13 @@ export default function Header () {
           
           :
             <Link to="/login"  className="btn" id="login_btn">Login</Link>
+           
           }
-          <Link to="/cart"><span id="cart" className="ml-3">Cart</span></Link>
-          <span className="ml-1" id="cart_count">{cartItems.length}</span>
+           </div>
+           <Link to='/orders' className="pri">My Orders</Link>
+           <Link  className="pri">Prime</Link>
+          <Link to="/cart" className='prim'><span id="car" className="ml-3 sp">Cart</span><span className="ct ml-3" id="cart_count">{cartItems.length}</span></Link>
+          
         </div>
     </nav>
     )

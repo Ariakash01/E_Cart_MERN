@@ -5,7 +5,7 @@ const APIFeatures = require('../utils/apiFeatures');
 
 //Get Products - /api/v1/products
 exports.getProducts = catchAsyncError(async (req, res, next)=>{
-    const resPerPage = 3;
+    const resPerPage = 25;
     
     let buildQuery = () => {
         return new APIFeatures(Product.find(), req.query).search().filter()
