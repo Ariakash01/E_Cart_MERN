@@ -7,6 +7,7 @@ export const getProducts = (keyword, price, category, rating, currentPage) => as
     try {  
         dispatch(productsRequest()) 
         let link = `/api/v1/products?page=${currentPage}`;
+      
         
         if(keyword) {
             link += `&keyword=${keyword}`
