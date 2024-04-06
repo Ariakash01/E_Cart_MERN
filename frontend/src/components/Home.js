@@ -40,6 +40,7 @@ export  default function Home(){
 
     return (
         <Fragment>
+            <MetaData title="Home"/>
   <div className="swip">
 <Swiper  
             modules={[Pagination]}
@@ -91,7 +92,7 @@ export  default function Home(){
          </div>
             {loading ? <Loader/>:
                 <Fragment>
-                    <MetaData title={'Home'} />
+                  
             
                     <section id="products" className="container-fluid mt-1 ">
 
