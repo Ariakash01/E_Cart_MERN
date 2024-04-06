@@ -33,9 +33,9 @@ npm run prod
 
 
 ## Test
-open the http://localhost:3000 and test the app
+To preview
+
+Open Ariakash_Cart : https://s-aiakash-shop.onrender.com
 
 
-## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
