@@ -91,7 +91,7 @@ export  default function Home(){
          </div>
             {loading ? <Loader/>:
                 <Fragment>
-                    <MetaData title={'Buy Best Products'} />
+                    <MetaData title={'Home'} />
             
                     <section id="products" className="container-fluid mt-1 ">
 

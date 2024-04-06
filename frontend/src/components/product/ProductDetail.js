@@ -116,6 +116,9 @@ export default function ProductDetail () {
 
                         <span className="btn btn-primary plus" onClick={increaseQty}>+</span>
                     </div>
+
+
+                    {user?
                     <button type="button" id="cart_btn" 
                      disabled={product.stock==0?true:false} 
                      onClick={()=>{
@@ -127,7 +130,9 @@ export default function ProductDetail () {
                     }}
                      className="btn btn-primary d-inline ml-4"
                      >Add to Cart</button>
-
+                     :
+                     <div className="alert alert-danger mt-5"> Login to Post Review</div>
+                     }
                     <hr/>
 
                     <p>Status: <span className={product.stock > 0 ?'greenColor':'redColor'} id="stock_status">{ product.stock > 0 ?'In Stock':'Out of Stock'}</span></p>
